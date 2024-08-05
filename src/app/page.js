@@ -23,7 +23,7 @@ export default function Home() {
         setMenus(response.data)
         // console.log('Menus state updated:', response.data)
       } catch (error) {
-        // console.error('Error fetching data', error)
+        // console.error('Error fetching data', error))
       }
     }
     fetchMenus()

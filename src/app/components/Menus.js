@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Fungsi untuk memformat harga
 function formatCurrency(value) {
   return value.toLocaleString('id-ID', {
     style: 'currency',
