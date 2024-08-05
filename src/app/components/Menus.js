@@ -1,38 +1,53 @@
 import React from 'react'
 
+// Fungsi untuk memformat harga
+function formatCurrency(value) {
+  return value.toLocaleString('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  })
+}
+
 export default function Menus({ menu }) {
+  console.log('isi menu:', menu)
+
+  const imageUrl = `assets/images/${menu.category.nama.toLowerCase()}/${
+    menu.gambar
+  }`
+
   return (
-    <div className='max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
-      <a href='#'>
-        <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-          Noteworthy technology acquisitions 2021
-        </h5>
-      </a>
-      <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-        Here are the biggest enterprise technology acquisitions of 2021 so far,
-        in reverse chronological order.
-      </p>
-      <a
-        href='#'
-        className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-      >
-        Read more
-        <svg
-          className='rtl:rotate-180 w-3.5 h-3.5 ms-2'
-          aria-hidden='true'
-          xmlns='http://www.w3.org/2000/svg'
-          fill='none'
-          viewBox='0 0 14 10'
-        >
-          <path
-            stroke='currentColor'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
-            d='M1 5h12m0 0L9 1m4 4L9 9'
-          />
-        </svg>
-      </a>
+    // <div className='max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg'>
+    //   <img
+    //     src={imageUrl}
+    //     alt={menu.nama}
+    //     className='w-full h-48 object-cover mb-4'
+    //   />
+    //   <h5 className='mb-2 text-2xl font-normal tracking-tight text-gray-900 '>
+    //     {menu.nama} <span className='font-bold'>({menu.kode})</span>
+    //   </h5>
+    //   <p className='mb-3 font-normal text-gray-700 '>
+    //     {formatCurrency(menu.harga)}
+    //   </p>
+    // </div>
+    <div className='card bg-base-100 shadow-xl'>
+      <figure className='h-48 w-full'>
+        <img
+          src={imageUrl}
+          alt={menu.nama}
+          className='h-full w-full object-cover'
+        />
+      </figure>
+      <div className='card-body items-center text-center'>
+        <h2 className='font-semibold'>
+          {menu.nama} <span className='font-extrabold'>({menu.kode})</span>
+        </h2>
+        <p className='text-xl'>{formatCurrency(menu.harga)}</p>
+        <div className='card-actions'>
+          <button className='btn outline outline-1 text-black'>Add Item</button>
+        </div>
+      </div>
     </div>
   )
 }
