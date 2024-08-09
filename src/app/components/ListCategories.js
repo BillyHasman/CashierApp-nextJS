@@ -32,11 +32,11 @@ export default function ListCategories({ changeCategory }) {
 
   // console.log('Current Categories state:', categories)
   return (
-    <div className='w-1/3 text-black text-2xl font-bold'>
+    <div className='w-1/6 text-black text-2xl font-bold'>
       <p>Daftar Kategori</p>
       <hr className='mt-3'></hr>
 
-      <div className='font-semibold text-base text-gray-900 bg-white rounded-lg '>
+      <div className='font-semibold text-lg text-gray-900 bg-white rounded-lg '>
         {categories &&
           categories.map((category) => (
             <div key={category.id}>
