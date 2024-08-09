@@ -1,16 +1,9 @@
 import React from 'react'
 
-function formatCurrency(value) {
-  return value.toLocaleString('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  })
-}
+import { formatCurrency } from '../utils/helpers'
 
-export default function Menus({ menu }) {
-  console.log('isi menu:', menu)
+export default function Menus({ menu, inputCart }) {
+  // console.log('isi menu:', menu)
 
   const imageUrl = `assets/images/${menu.category.nama.toLowerCase()}/${
     menu.gambar
@@ -44,7 +37,12 @@ export default function Menus({ menu }) {
         </h2>
         <p className='text-xl'>{formatCurrency(menu.harga)}</p>
         <div className='card-actions'>
-          <button className='btn outline outline-1 text-black'>Add Item</button>
+          <button
+            className='btn outline outline-1 text-black'
+            onClick={() => inputCart(menu)}
+          >
+            Add Item
+          </button>
         </div>
       </div>
     </div>
