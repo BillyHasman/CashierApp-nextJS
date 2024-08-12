@@ -32,10 +32,10 @@ export default function Menus({ menu, inputCart }) {
         />
       </figure>
       <div className='card-body items-center text-center'>
-        <h2 className='font-semibold'>
+        <h2 className='font-medium '>
           {menu.nama} <span className='font-extrabold'>({menu.kode})</span>
         </h2>
-        <p className='text-xl'>{formatCurrency(menu.harga)}</p>
+        <p className='text-xl font-medium'>{formatCurrency(menu.harga)}</p>
         <div className='card-actions'>
           <button
             className='btn outline outline-1 text-black'
