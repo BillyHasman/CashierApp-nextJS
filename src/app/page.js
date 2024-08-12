@@ -36,8 +36,10 @@ export default function Home() {
   }, [categorySelect])
 
   const changeCategory = (value) => {
-    setCategorySelect(value)
-    setMenus([])
+    if (value !== categorySelect) {
+      setCategorySelect(value)
+      // setMenus([])
+    }
   }
 
   const inputCart = async (value) => {
@@ -115,9 +117,9 @@ export default function Home() {
   return (
     <div className='bg-white min-h-screen'>
       <Navbar />
-      <div className='w-full mx-4 mt-4 flex flex-row gap-4'>
+      <div className='w-auto mx-4 mt-4 flex flex-row gap-4'>
         <ListCategories changeCategory={changeCategory} />
-        <div className='w-auto text-black text-2xl font-bold mx-10'>
+        <div className='w-1/2 text-black text-2xl font-bold mx-10'>
           <h4>
             Daftar Produk <span>{categorySelect}</span>
           </h4>
