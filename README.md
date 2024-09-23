@@ -41,11 +41,10 @@ Before you start, ensure you have the following installed:
 
 4.  Set up Tailwind CSS by creating the configuration file:
 
-    bash
     npx tailwindcss init
 
-    Tailwind should be set up in your globals.css file:
-    bash
+Tailwind should be set up in your globals.css file:
+
     css
     @tailwind base;
     @tailwind components;
