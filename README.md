@@ -16,14 +16,14 @@ Before you start, ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/) (version 14.x or later)
 - [npm](https://www.npmjs.com/) (comes with Node.js)
-- [JSON Server](https://www.npmjs.com/package/json-server)
+- [JSON Server](https://github.com/typicode/json-server)
 
 ## Installation
 
 1.  Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/cashierApp.git
+    git clone https://github.com/BillyHasman/CashierApp-nextJS.git
     cd cashierApp
     ```
 
@@ -49,6 +49,10 @@ Tailwind should be set up in your globals.css file:
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
+
+5. Install Json Server:
+
+   npm install json-server
 
 ## Running the Project
 
