@@ -41,17 +41,15 @@ Before you start, ensure you have the following installed:
 
 4.  Set up Tailwind CSS by creating the configuration file:
 
-        ```bash
-        npx tailwindcss init
-        ```
+    bash
+    npx tailwindcss init
 
     Tailwind should be set up in your globals.css file:
-    `bash
+    bash
     css
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
-    `
 
 ## Running the Project
 
@@ -59,9 +57,7 @@ Before you start, ensure you have the following installed:
 
 To run the Next.js app, use the following command:
 
-    ```bash
     npm run dev
-    ```
 
 This will start the development server for the frontend, typically running at http://localhost:3000.
 
@@ -69,15 +65,11 @@ This will start the development server for the frontend, typically running at ht
 
 Navigate to the cashier-backend directory:
 
-    ```bash
     cd cashier-backend
-    ```
 
 ### Start the JSON Server with the following command:
 
-    ```bash
     npx json-server db.json --port=3004
-    ```
 
 The JSON Server will run at http://localhost:3004 and provide RESTful API routes based on your db.json.
 
