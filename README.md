@@ -20,9 +20,73 @@ Before you start, ensure you have the following installed:
 
 ## Installation
 
-1. Clone this repository:
+1.  Clone this repository:
 
-   ```bash
-   git clone https://github.com/your-username/cashierApp.git
-   cd cashierApp
-   ```
+    ```bash
+    git clone https://github.com/your-username/cashierApp.git
+    cd cashierApp
+    ```
+
+2.  Install dependencies for the frontend:
+
+    ```bash
+    npm install
+    ```
+
+3.  Install Tailwind CSS if it's not already installed:
+
+    ```bash
+    npm install -D tailwindcss
+    ```
+
+4.  Set up Tailwind CSS by creating the configuration file:
+
+        ```bash
+        npx tailwindcss init
+        ```
+
+    Tailwind should be set up in your globals.css file:
+    `bash
+    css
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    `
+
+## Running the Project
+
+### Start the Frontend
+
+To run the Next.js app, use the following command:
+
+    ```bash
+    npm run dev
+    ```
+
+This will start the development server for the frontend, typically running at http://localhost:3000.
+
+### Start the Backend
+
+Navigate to the cashier-backend directory:
+
+    ```bash
+    cd cashier-backend
+    ```
+
+### Start the JSON Server with the following command:
+
+    ```bash
+    npx json-server db.json --port=3004
+    ```
+
+The JSON Server will run at http://localhost:3004 and provide RESTful API routes based on your db.json.
+
+## Additional Notes
+
+- The frontend is built using Next.js, and Tailwind CSS is used for styling.
+- The backend is a mock API server using JSON Server, simulating RESTful endpoints using a simple - - JSON file (db.json).
+
+## Commands Overview
+
+- Frontend: npm run dev (Next.js server)
+- Backend: npx json-server db.json --port=3004 (JSON Server)
