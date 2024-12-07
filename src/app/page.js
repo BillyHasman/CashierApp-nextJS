@@ -124,7 +124,7 @@ export default function Home() {
             Daftar Produk <span>{categorySelect}</span>
           </h4>
           <hr className='mt-3'></hr>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-4'>
+          <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 my-4'>
             {menus &&
               menus.map((menu) => (
                 <Menus key={menu.id} menu={menu} inputCart={inputCart} />
